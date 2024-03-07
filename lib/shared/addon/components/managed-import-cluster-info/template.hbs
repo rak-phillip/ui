@@ -8,26 +8,6 @@
 {{/if}}
 <div class="row">
   <div class="col span-6">
-    <label class="acc-label">
-      {{t "managedImportClusterInfo.kubernetesVersion"}}
-    </label>
-    <div class="form-control">
-      {{#input-or-display
-        editable=(and editing (gt allVersions.length 1))
-        value=config.kubernetesVersion
-      }}
-        {{searchable-select
-          classNames="form-control"
-          content=allVersions
-          value=config.kubernetesVersion
-          readOnly=(not editing)
-        }}
-      {{/input-or-display}}
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col span-6">
     <div class="form-control checkbox">
       {{input
         id="drain-master-nodes"
